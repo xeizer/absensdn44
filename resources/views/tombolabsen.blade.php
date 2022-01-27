@@ -10,7 +10,9 @@
                 <div class="card-body">
 <br>SELAMAT DATANG<br/>
 {Nama yang Login}<br/>
-Tanggal : 12-08-2022<br/>
+Tanggal :{{ date('Y-m-d ') }}<br/>
+Jam :{{ date('H:i:s') }}<br/>
+<a href="#" class="btn btn-success btn-lg">Tombol</a>
                 </div>
             </div>
         </div>
