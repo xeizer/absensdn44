@@ -44,7 +44,7 @@ input[type=text]{
     background-image: url('gambar/user.png');
 }
 input[type=password]{
-    background-image: url('gambar/password.png');
+    background-image: url("{{asset('gambar/password.jpg')}}");
 }
         
 input[type=text]:focus,
@@ -77,7 +77,7 @@ input[type=reset]{
 <body>
      <div id="container">
         <form>
-            <img id="logo" src="gambar/logo.png">
+            <img id="logo" src="gambar/logo.jpg">
             <label for="fname">Username:</label>
             <input type="text" name="Username" placeholder="Masukan Username">
             <label for="lname">Password:</label>
