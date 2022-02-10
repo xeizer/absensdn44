@@ -10,4 +10,8 @@ class AbsenController extends Controller
     {
         return view("tombolabsen");
     }
+    public function tampilansetelahabsen()
+    {
+        return view("tampilansetelahabsen");
+    }
 }

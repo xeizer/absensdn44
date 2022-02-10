@@ -21,3 +21,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/tombolabsen', [App\Http\Controllers\AbsenController::class, 'tombolabsen'])->name('tombolabsen');
+Route::get('/tampilansetelahabsen', [App\Http\Controllers\AbsenController::class, 'tampilansetelahabsen'])->name('tampilansetelahabsen');
