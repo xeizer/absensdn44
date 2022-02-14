@@ -23,7 +23,7 @@
     padding: 30px 20px;
     border-radius: 6px;
 }
-input[type=text],
+input[type=email],
 input[type=password]{
     font-size: 15px;
     width: 100%;
@@ -40,14 +40,14 @@ input[type=password]{
     padding-left: 40px;
     border-radius: 5px;
 }
-input[type=text]{
+input[type=email]{
     background-image: url('gambar/user.png');
 }
 input[type=password]{
     background-image: url("{{asset('gambar/password.jpg')}}");
 }
         
-input[type=text]:focus,
+input[type=email]:focus,
 input[type=password]:focus {
     border: 2px solid #555;
 }
@@ -76,12 +76,13 @@ input[type=reset]{
 </head>
 <body>
      <div id="container">
-        <form>
+     <form method="POST" action="{{ route('login') }}">
+              @csrf
             <img id="logo" src="gambar/logo.jpg">
             <label for="fname">Username:</label>
-            <input type="text" name="Username" placeholder="Masukan Username">
+            <input id="email" type="email"  name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
             <label for="lname">Password:</label>
-            <input type="password" name="Password" placeholder="Masukan Password">
+            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
             <input type="submit" value="Login">
             <input type="reset" value="Reset">
           </form>
